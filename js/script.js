@@ -12,8 +12,9 @@ function updateButtonStatus() {
 }
 
 function validateName(name) {
-    const nameRegex = /^([A-Z][a-z]{1,} ?)+$/; //add max length
-    return nameRegex.test(name);
+    const nameRegex = /^([A-Z][a-z]{1,} ?)+$/;
+    let maxLength = name.length<=25;
+    return (nameRegex.test(name) && maxLength);
 }
 
 function validateEmail(email) {
